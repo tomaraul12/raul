@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "ANPC",
+  title: "Protecția consumatorilor – ANPC",
   description: "Informații ANPC și soluționarea alternativă a litigiilor pentru consumatori.",
   alternates: { canonical: "/anpc" },
 }

@@ -13,7 +13,7 @@ export default function ContactPage() {
   }
   return (
     <>
-      <div className="page-header"><h1 className="page-title">Contact</h1><p className="page-subtitle">Suntem aici să te ajutăm</p></div>
+      <div className="page-header"><h1 className="page-title">Contact TechNest în Timișoara</h1><p className="page-subtitle">Întrebări despre filamente, componente electronice, piese de imprimante sau servicii de printare 3D? Scrie-ne sau contactează magazinul.</p></div>
       <div className="contact-grid">
         <div className="contact-info">
           <h3 style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)', marginBottom: '1.5rem' }}>📞 Date de Contact</h3>
@@ -35,6 +35,11 @@ export default function ContactPage() {
             </form>}
         </div>
       </div>
+      <section style={{ maxWidth: 880, margin: '3rem auto 0', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+        <h2 className="section-title">Cu ce te putem ajuta?</h2>
+        <p>Pentru alegerea unui filament sau a unei componente electronice, menționează imprimanta, placa de dezvoltare sau aplicația pentru care ai nevoie de produs. În cazul pieselor de schimb pentru imprimante 3D, modelul exact și codul piesei ne ajută să discutăm compatibilitatea.</p>
+        <p>Dacă dorești printarea unei piese la comandă, poți folosi și <a href="/print3d">formularul pentru ofertă de printare 3D</a>, unde poți atașa un model sau descrie proiectul. Pentru întrebări despre comenzi și disponibilitate, utilizează datele de contact afișate mai sus.</p>
+      </section>
     </>
   )
 }

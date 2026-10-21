@@ -15,7 +15,8 @@ Auditul Work din 20–21 octombrie a verificat 511 URL-uri din sitemap (498 prod
 6. `src/app/layout.tsx`: canonical explicit pe homepage.
 7. `src/app/sitemap.ts`: elimina valori `lastmod` ce se schimbau la fiecare generare fara dovada unei schimbari semnificative. Cand baza de date va oferi `updated_at`, se poate reintroduce o data de modificare corecta.
 8. `src/app/piese-imprimante-3d/page.tsx`: redirectionare permanenta 308 spre ruta canonica `/accesorii`, care exista deja in navigatie si sitemap. Verifica daca exista legaturi externe importante catre vechea ruta.
-9. `.github/workflows/seo-check.yml` + `scripts/seo-smoke-test.mjs`: teste fara deploy, fara secrete, cu date Supabase simulate.
+9. `src/app/contact/page.tsx` si `src/app/contact/layout.tsx`: text si metadate utile pentru contactul local; `src/app/anpc/layout.tsx`: titlu explicit.
+10. `.github/workflows/seo-check.yml` + `scripts/seo-smoke-test.mjs`: teste fara deploy, fara secrete, cu date Supabase simulate.
 
 ## Teste executate in GitHub Actions
 - `npm ci`: PASS
