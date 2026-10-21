@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Filamente 3D",
-  description: "Peste 150 de variante de filamente 3D premium: PLA, PETG, ABS, TPU și altele, în toate culorile. Livrare rapidă în toată țara.",
+  title: "Filamente 3D PLA, PETG, TPU și ABS în Timișoara",
+  description: "Descoperă filamente 3D PLA, PETG, TPU și ABS la TechNest Timișoara. Compară materiale și culori pentru imprimanta ta. Comenzi online și livrare în România.",
   alternates: { canonical: "/filamente" },
 }
 

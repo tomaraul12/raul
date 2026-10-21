@@ -9,9 +9,10 @@ interface Props {
   title: string
   subtitle?: string
   initialProducts?: Product[] | null
+  seoContent?: { heading: string; paragraphs: string[] }
 }
 
-export default function ProductsPage({ categorySlug, title, subtitle, initialProducts }: Props) {
+export default function ProductsPage({ categorySlug, title, subtitle, initialProducts, seoContent }: Props) {
   const [products, setProducts] = useState<Product[]>(initialProducts ?? [])
   const [loading, setLoading] = useState(initialProducts == null)
   const [search, setSearch] = useState('')
@@ -250,6 +251,15 @@ export default function ProductsPage({ categorySlug, title, subtitle, initialPro
         <div className="products-grid">
           {filtered.map(p => <ProductCard key={p.id} product={p} />)}
         </div>
+      )}
+
+      {seoContent && (
+        <section aria-label="Informații utile despre categorie" style={{ maxWidth: 960, margin: '3rem auto 0', padding: '0 0.5rem' }}>
+          <h2 className="section-title">{seoContent.heading}</h2>
+          {seoContent.paragraphs.map((paragraph, index) => (
+            <p key={index} style={{ color: 'var(--text-secondary)', lineHeight: 1.75, marginBottom: '1rem' }}>{paragraph}</p>
+          ))}
+        </section>
       )}
     </>
   )

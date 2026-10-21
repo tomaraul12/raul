@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Piese Imprimante 3D",
-  description: "Piese de schimb și consumabile pentru imprimante 3D: duze, hotend-uri, curele, rulmenți, ventilatoare și multe altele.",
+  title: "Piese și accesorii pentru imprimante 3D",
+  description: "Caută piese pentru imprimante 3D la TechNest Timișoara: duze, hotend-uri și consumabile. Verifică modelele compatibile și comandă online.",
   alternates: { canonical: "/accesorii" },
 }
 

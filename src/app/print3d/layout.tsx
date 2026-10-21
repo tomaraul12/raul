@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Print 3D Custom",
-  description: "Printare 3D la comandă în 24-48h. Trimite fișierul tău și primești ofertă personalizată de la TechNest.",
+  title: "Printare 3D la comandă în Timișoara",
+  description: "Servicii de printare 3D la comandă în Timișoara: prototipuri și piese personalizate. Trimite fișierul 3D și solicită o ofertă adaptată proiectului.",
   alternates: { canonical: "/print3d" },
 }
 

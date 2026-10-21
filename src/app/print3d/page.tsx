@@ -43,15 +43,15 @@ export default function Print3DPage() {
   return (
     <>
       <div className="page-header animate-fade-down">
-        <h1 className="page-title">Print 3D Custom</h1>
-        <p className="page-subtitle">Printare la comandă în 24-48h — trimite fișierul tău sau descrie proiectul</p>
+        <h1 className="page-title">Printare 3D la comandă în Timișoara</h1>
+        <p className="page-subtitle">Trimite fișierul 3D sau descrie proiectul pentru a primi o ofertă personalizată și un termen estimat.</p>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
         {[
-          { icon: '⏱️', t: 'Livrare 24-48h', d: 'Comenzile sunt procesate și printate rapid' },
-          { icon: '🎨', t: 'Orice material', d: 'PLA, PETG, ABS, TPU, ASA și altele' },
-          { icon: '📐', t: 'Orice dimensiune', d: 'De la piese mici la obiecte mari' },
+          { icon: '⏱️', t: 'Termen estimat', d: 'Durata depinde de dimensiuni, complexitate și volumul comenzii' },
+          { icon: '🎨', t: 'Materiale variate', d: 'Opțiuni precum PLA, PETG, ABS, TPU sau ASA, în funcție de proiect' },
+          { icon: '📐', t: 'Piese mici și mari', d: 'Dimensiunile realizabile depind de echipament și material' },
           { icon: '💰', t: 'Prețuri competitive', d: 'Ofertă personalizată pentru fiecare proiect' },
         ].map(c => (
           <div key={c.t} className="feature-card">
@@ -61,6 +61,13 @@ export default function Print3DPage() {
           </div>
         ))}
       </div>
+
+      <section style={{ maxWidth: 850, margin: '0 auto 2.5rem', color: 'var(--text-secondary)', lineHeight: 1.75 }}>
+        <h2 className="section-title">Ce informații ne ajută să ofertăm o piesă printată 3D?</h2>
+        <p>Poți atașa un model STL, OBJ, STEP sau 3MF, ori poți descrie piesa dorită dacă nu ai încă un fișier. Menționează dimensiunile aproximative, cantitatea, materialul preferat și condițiile în care va fi folosită piesa.</p>
+        <p>Prețul și termenul de realizare depind de geometrie, dimensiuni, material, numărul de bucăți și finisajul solicitat. După evaluarea proiectului, îți comunicăm soluția disponibilă și estimarea de cost și timp.</p>
+        <p>TechNest oferă servicii de printare 3D la comandă în Timișoara, pentru prototipuri, piese funcționale și proiecte personalizate. Pentru compatibilitate sau material, putem discuta cerințele tehnice înainte de producție.</p>
+      </section>
 
       <div style={{ maxWidth: 640, margin: '0 auto' }}>
         {sent ? (
