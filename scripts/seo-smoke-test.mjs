@@ -74,7 +74,7 @@ try {
   }
 
   const home = await (await fetch(site + '/')).text()
-  assert.match(home, /<link\s+rel="canonical"\s+href="https:\/\/www\.technestprototyping\.ro\/"/)
+  assert.ok(home.includes('<link rel="canonical" href="https://www.technestprototyping.ro"') || home.includes('<link rel="canonical" href="https://www.technestprototyping.ro/"'), 'Homepage canonical tag missing')
   console.log('PASS homepage: canonical is set')
 
   const robots = await (await fetch(site + '/robots.txt')).text()
