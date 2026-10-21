@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     template: '%s | TechNest',
   },
   description: SITE_DESCRIPTION,
+  alternates: { canonical: '/' },
   applicationName: SITE_NAME,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {

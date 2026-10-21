@@ -7,10 +7,8 @@ import { SITE_URL, STATIC_ROUTES } from '@/lib/site'
 export const revalidate = 3600
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date()
   const entries: MetadataRoute.Sitemap = STATIC_ROUTES.map(r => ({
     url: `${SITE_URL}${r.path === '/' ? '' : r.path}`,
-    lastModified: now,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }))
@@ -26,7 +24,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (let from = 0; ; from += pageSize) {
       const { data, error } = await sb
         .from('products')
-        .select('id, created_at')
+        .select('id')
         .eq('is_active', true)
         .order('created_at', { ascending: true })
         .range(from, from + pageSize - 1)
@@ -34,7 +32,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       for (const p of data) {
         entries.push({
           url: `${SITE_URL}/product/${p.id}`,
-          lastModified: p.created_at ? new Date(p.created_at) : now,
           changeFrequency: 'weekly',
           priority: 0.7,
         })
