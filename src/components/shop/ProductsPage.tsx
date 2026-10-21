@@ -8,11 +8,12 @@ interface Props {
   categorySlug: string
   title: string
   subtitle?: string
+  initialProducts?: Product[] | null
 }
 
-export default function ProductsPage({ categorySlug, title, subtitle }: Props) {
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
+export default function ProductsPage({ categorySlug, title, subtitle, initialProducts }: Props) {
+  const [products, setProducts] = useState<Product[]>(initialProducts ?? [])
+  const [loading, setLoading] = useState(initialProducts == null)
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('default')
   const [filterAvail, setFilterAvail] = useState('all')
@@ -25,6 +26,8 @@ export default function ProductsPage({ categorySlug, title, subtitle }: Props) {
 
   useEffect(() => {
     async function load() {
+      // Produsele vin deja in HTML. Folosim cererea din browser doar ca fallback.
+      if (initialProducts != null) return
       setLoading(true)
       const sb = supabaseClient()
       const { data: cat } = await sb
